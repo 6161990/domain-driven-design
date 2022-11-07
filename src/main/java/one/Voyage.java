@@ -38,7 +38,7 @@ public class Voyage {
      * */
     public int makeBooking_ver3(Cargo cargo, Voyage voyage){
         OverbookingPolicy overbookingPolicy = new OverbookingPolicy();
-        if(!overbookingPolicy.isAllowed(cargo, voyage)) return -1;
+        if(!overbookingPolicy.isAllowed(cargo, voyage)) return -1; // 환희: -1 이 뭔지 어케알아 ㅡㅡ
         int confirmation = orderConfirmationSequence.next();
         voyage.addCargo(cargo, confirmation);
         return confirmation;
